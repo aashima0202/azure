@@ -1,8 +1,8 @@
 jobs:
 - job:
-  displayName: ubuntu-16.04
+  displayName: ubuntu-latest
   pool:
-    vmImage: 'ubuntu-16.04'
+    vmImage: 'ubuntu-latest'
   strategy:
     matrix:
       Python27:
@@ -29,9 +29,9 @@ jobs:
     displayName: pytest
 
 - job:
-  displayName: macOS-10.13
+  displayName: macOS-latest
   pool:
-    vmImage: 'macOS-10.13'
+    vmImage: 'macOS-latest'
   strategy:
     matrix:
       Python27:
@@ -89,7 +89,7 @@ jobs:
 - job:
   displayName: From environment.yml
   pool:
-    vmImage: 'ubuntu-16.04'
+    vmImage: 'ubuntu-latest'
 
   steps:
   - bash: echo "##vso[task.prependpath]$CONDA/bin"
